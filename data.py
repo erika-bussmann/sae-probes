@@ -4,7 +4,7 @@ def get_property_from_data(data, property: str):
     desired_keys = ["text"]
     desired_keys.append(property)
     filtered_data = [
-    {key: entry[key] for key in desired_keys}
+    [entry[key] for key in desired_keys]
     for entry in data
     ]
     return filtered_data
